@@ -10,7 +10,7 @@ function getComputerChoice () {
     return randomChoice === 1 ? "rock" : randomChoice === 2 ? "paper" : "scissors";
 }
 
-function gameRound () {
+function playRound () {
     let playerSelection = getPlayerChoice();
     let computerSelection = getComputerChoice();
     let result = getRoundResult(playerSelection, computerSelection);
@@ -49,7 +49,7 @@ function getRoundResult (player, cpu) {
 
 function game () {
     for (let i = 1; i <= 5; i++) {
-        console.log(gameRound());
+        console.log(playRound());
     }
     if (cpuScore === playerScore) {
         console.log("Game ended in a tie");
